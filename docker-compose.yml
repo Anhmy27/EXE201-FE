@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile  # Chỉ định Dockerfile nếu có tên khác
+    container_name: frontend_app
+    restart: always
+    ports:
+      - "5174:5174"  # Mở cổng cho ứng dụng
+    networks:
+      - prd-kltn-fe
+
+networks:
+  prd-kltn-fe:

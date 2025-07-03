@@ -1,0 +1,145 @@
+@import url("https://fonts.google.com/specimen/Inter");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.post-wrapper {
+  @apply w-full sm:max-w-2xl md:max-w-3xl
+}
+
+.custom-scrollbar {
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #D1D5DB;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #A1A1AA;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #6B7280;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #4B5563;
+}
+
+.lazy-img {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out 0.1s;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+/* Richest Oxygenaires */
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.multiselect {
+  @apply bg-white dark:bg-gray-900 border-gray-300 dark:border-gray-700;
+
+  .multiselect__input,
+  .multiselect__single {
+    @apply bg-white text-gray-900 text-base dark:bg-gray-700 dark:text-gray-100 mb-2 h-8;
+    border-radius: 2px;
+
+    &::placeholder {
+      @apply text-gray-400 dark:text-gray-500;
+    }
+  }
+
+  .multiselect__tags {
+    @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 border-gray-300 dark:border-gray-700;
+  }
+
+  .multiselect__tag {
+    @apply bg-gray-100 text-gray-700 rounded-md dark:bg-gray-700 dark:text-gray-300;
+    @apply h-[30px] leading-[30px] py-0 pr-[26px] pl-[10px];
+
+    &:hover {
+      @apply bg-gray-200;
+      @apply dark:bg-gray-600;
+    }
+  }
+
+  .multiselect__tag-icon {
+    @apply bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300 leading-[30px];
+
+    &:after {
+      color: currentColor;
+    }
+
+    &:hover {
+      @apply bg-gray-200 text-gray-700;
+      @apply dark:bg-gray-600 dark:text-gray-300;
+    }
+  }
+
+  .multiselect__option {
+    /* Style cho option thường */
+    @apply text-gray-900 dark:text-gray-100;
+
+    &--selected {
+      @apply bg-gray-100 text-gray-900;
+      @apply dark:bg-gray-700 dark:text-gray-100;
+
+      &.multiselect__option--highlight {
+        @apply bg-gray-200;
+        @apply dark:bg-gray-600;
+      }
+    }
+  }
+
+  .multiselect__content-wrapper {
+    @apply overflow-y-auto max-h-full;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      @apply bg-gray-300 rounded;
+
+      &:hover {
+        @apply bg-zinc-400;
+      }
+    }
+  }
+
+  .multiselect__content-wrapper {
+    @apply bg-white dark:bg-gray-900 border-gray-300 dark:border-gray-700;
+  }
+
+  .multiselect__spinner {
+    @apply bg-slate-500 dark:bg-slate-600 text-white;
+  }
+}
+
+.apexcharts-legend-text {
+  color: #374151 !important; /* Mặc định màu xám đậm */
+}
+.dark .apexcharts-legend-text {
+  color: white !important; /* Chế độ tối màu trắng */
+}
